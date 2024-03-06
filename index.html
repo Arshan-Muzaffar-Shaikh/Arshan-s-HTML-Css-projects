@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars and Bikes</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div class="jumbotron jumbotron-main">
+        <nav class="navbar">
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">CAR CARE</a>
+              </div>
+              <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                  <li><a href="about.html"><span class="glyphicon glyphicon-info-sign"></span> About Us </a></li>
+                  <li><a href="services.html"><span class="glyphicon glyphicon-wrench"></span> Services</a></li>
+                  <li><a href="contact.html"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
+                  <li><a href="Cart.html"><span class="glyphicon glyphicon-shopping-cart"> Cart<script>
+                    function removeFromCart(index) {
+                        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                        cart.splice(index, 1);
+                        localStorage.setItem('cart', JSON.stringify(cart));
+                        updateCartDisplay();
+                    }
+            
+                    function updateCartDisplay() {
+                        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                        let cartItemsDiv = document.getElementById('cart-items');
+                        let cartCounter = document.getElementById('cart-counter');
+                        let totalItems = 0;
+            
+                        cartItemsDiv.innerHTML = ''; // Clear existing items
+            
+                        cart.forEach((item, index) => {
+                            let itemDiv = document.createElement('div');
+                            itemDiv.classList.add('cart-item');
+                          
+                            cartItemsDiv.appendChild(itemDiv);
+            
+                            totalItems += 1; // Increment totalItems for each item in the cart
+                        });
+            
+                        // Update the cart counter
+                        cartCounter.innerText = `${totalItems} ${totalItems === 1 ? 'item' : 'items'}`;
+                    }
+                </script>
+            </head>
+            <body>
+            
+                <nav>
+                    <h2 id="cart-counter">Cart (0 items)</h2>
+                </nav>
+            
+                <div id="cart-items">
+                    <!-- Cart items will be displayed here -->
+                </div>
+            
+                <script>
+                    // Initial update of cart display
+                    updateCartDisplay();
+                </script></span></a></li>
+                 
+           
+                </ul>
+              </div><!--/.nav-collapse -->
+            </div>
+          </nav>
+        <div class="container">
+            <h1>CAR CARE</h1>
+            <p class="lead">Here we sell all types of bikes and cars!! <br>
+               Also Used!!<br>
+             You can totally rely on us for assurance of your vehical and for further service queries</p>
+             <p><a class="btn btn-primary btn-lg" href="about.html">Read More</a>
+             <a class="btn btn-default btn-lg" href="contact.html">Contact us</a></p>
+       </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 box">
+          <div class="well">
+            <span class="glyphicon glyphicon-phone"></span>
+            <h3>Mobile App</h3>
+            <p>We have our own mobile application through which you can use our services.
+              <p><a class="btn btn-primary btn-lg" href="#">Downlaod App</a></p>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 box">
+          <div class="well">
+            <span class="glyphicon glyphicon-list-alt"></span>
+            <h3>Available Slots</h3>
+            <p>Check and choose the Available time slot as per your convenience .
+              <p><a class="btn btn-primary btn-lg" href="#">Book Slot</a></p>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 box">
+          <div class="well">
+            <span class="glyphicon glyphicon-shopping-cart"></span>
+            <h3>Items For Sale</h3>
+            <p>Get a brief of all Available vehicals and select it for inspection.
+              <p><a class="btn btn-primary btn-lg" href="#">Check Items</a></p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <div class="section-a">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>GRAB SOME AMAZING DEALS HERE!!!</h1>
+          <p>This deals have some exclusive offers and upto 30% discount </p>
+        </div>
+      </div>
+
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img class="img" src="img/car.png">
+        </div>
+        <div class="col-md-6">
+          <h1>CAR'S SPARES</h1>
+          <p>All the spares are original and has its own invoice.
+            <br>All of the servicing and fitting of the parts are done by professionals
+          </p>
+          <ul class="list-group">
+            <li class="list-group-item"><span 
+            class="glyphicon glyphicon-user"></span>  Information of User</li>
+            <li class="list-group-item"><span 
+              class="glyphicon glyphicon-usd"></span>  Payment Gateway</li>
+              <li class="list-group-item"><span 
+                class="glyphicon glyphicon-phone-alt"></span>  Help and Support</li>
+                <li class="list-group-item"><span 
+                  class="glyphicon glyphicon-envelope"></span>  Email id </li>
+                  <li class="list-group-item"><span 
+                    class="glyphicon glyphicon-thumbs-up"></span>  Customer Satisfaction</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer class="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+          <h2>About Us</h2>
+          <p>Here we sell all types of vehiclas and also with proper registeration
+            <br>
+            All the vehicals sold are totally checked and well assesed before bringging it to the customer 
+            <br>
+            All the payment methods are allowed followed by the rules of the government  
+          </p>
+          <p>Copyright &copy; 2024</p>
+          </div>
+          <div class="col-md-4">
+            
+              <h2>Conatct </h2>
+              <p>9922649171404
+                <br>carsandbike@gmail.com
+              
+              </p>
+          </div>
+          <div class="col-md-4">
+            
+            <h2>Follow Us</h2>
+            <div class="icons">
+            <ul class="list">
+              
+             <li> <a href="#"><ion-icon name="logo-facebook"></ion-icon><h4>fb.cars.bikes2024</h4></a></li>
+              <li><a href="#"><ion-icon name="logo-instagram"></ion-icon><h4>insta.cars.bikes2024</h4></a></li>
+                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon><h4>tweet.cars.bikes2024</h4></a></li>
+              
+            </ul>
+            </div>
+              
+          
+          
+          </div>
+              
+          
+          </div>
+         
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    
+    <script
+  src="https://code.jquery.com/jquery-1.12.4.js"
+  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
