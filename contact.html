@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars and Bikes</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div class="jumbotron jumbotron-sub">
+        <nav class="navbar">
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">CAR CARE</a>
+              </div>
+              <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                    <li><a href="about.html"><span class="glyphicon glyphicon-info-sign"></span> About Us</a></li>
+                    <li><a href="services.html"><span class="glyphicon glyphicon-wrench"></span> Services</a></li>
+                    <li><a href="contact.html"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
+                    <li><a href="Cart.html"><span class="glyphicon glyphicon-shopping-cart"> Cart<script>
+                      function removeFromCart(index) {
+                          let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                          cart.splice(index, 1);
+                          localStorage.setItem('cart', JSON.stringify(cart));
+                          updateCartDisplay();
+                      }
+              
+                      function updateCartDisplay() {
+                          let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                          let cartItemsDiv = document.getElementById('cart-items');
+                          let cartCounter = document.getElementById('cart-counter');
+                          let totalItems = 0;
+              
+                          cartItemsDiv.innerHTML = ''; // Clear existing items
+              
+                          cart.forEach((item, index) => {
+                              let itemDiv = document.createElement('div');
+                              itemDiv.classList.add('cart-item');
+                            
+                              cartItemsDiv.appendChild(itemDiv);
+              
+                              totalItems += 1; // Increment totalItems for each item in the cart
+                          });
+              
+                          // Update the cart counter
+                          cartCounter.innerText = `${totalItems} ${totalItems === 1 ? 'item' : 'items'}`;
+                      }
+                  </script>
+              </head>
+              <body>
+              
+                  <nav>
+                      <h2 id="cart-counter">Cart (0 items)</h2>
+                  </nav>
+              
+                  <div id="cart-items">
+                      <!-- Cart items will be displayed here -->
+                  </div>
+              
+                  <script>
+                      // Initial update of cart display
+                      updateCartDisplay();
+                  </script></span></a></li></span></a></li>
+                 
+           
+                </ul>
+              </div><!--/.nav-collapse -->
+            </div>
+          </nav>
+        <div class="container">
+            <h1>Contact</h1>
+            
+       </div>
+    </div>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Contact Us</title>
+      <style>
+          body {
+              font-family: Arial, sans-serif;
+              margin: 0;
+              padding: 0;
+              background-color: #f4f4f4;
+              text-align: center;
+          }
+  
+          header {
+              background-color: #232f3e;
+              color: white;
+              text-align: center;
+              padding: 10px;
+          }
+  
+          .contact-container {
+              max-width: 600px;
+              margin: 20px auto;
+              padding: 20px;
+              background-color: #fff;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              border-radius: 8px;
+          }
+  
+          .contact-button {
+              background-color: #25d366;
+              color: white;
+              padding: 10px 20px;
+              font-size: 16px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+          }
+      </style>
+  </head>
+  <body>
+  
+      <header>
+          <h1>Contact Us</h1>
+      </header>
+  
+      <div class="contact-container">
+          <p>For any inquiries, feel free to reach out to us on WhatsApp:</p>
+          <button class="contact-button" onclick="openWhatsApp('9552218977')">Chat on WhatsApp</button>
+      </div>
+  
+      <script>
+          function openWhatsApp(phoneNumber) {
+              // Construct the WhatsApp URI with the phone number
+              const whatsappURI = `whatsapp://send?phone=${encodeURIComponent(phoneNumber)}`;
+  
+              // Open WhatsApp in a new tab or window
+              window.open(whatsappURI, '_blank');
+          }
+      </script>
+              
+            </div>
+          </div>
+
+        </div>
+       
+
+   
+    <footer class="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+          <h2>About Us</h2>
+          <p>Here we sell all types of vehiclas and also with proper registeration
+            <br>
+            All the vehicals sold are totally checked and well assesed before bringging it to the customer 
+            <br>
+            All the payment methods are allowed followed by the rules of the government  
+          </p>
+          <p>Copyright &copy; 2024</p>
+          </div>
+          <div class="col-md-4">
+            
+              <h2>Conatct </h2>
+              <p>9922649171404
+                <br>carsandbike@gmail.com
+              
+              </p>
+          </div>
+          <div class="col-md-4">
+            
+            <h2>Follow Us</h2>
+            <div class="icons">
+            <ul class="list">
+              
+             <li> <a href="#"><ion-icon name="logo-facebook"></ion-icon><h4>fb.cars.bikes2024</h4></a></li>
+              <li><a href="#"><ion-icon name="logo-instagram"></ion-icon><h4>insta.cars.bikes2024</h4></a></li>
+                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon><h4>tweet.cars.bikes2024</h4></a></li>
+              
+            </ul>
+            </div>
+              
+          
+          
+          </div>
+              
+          
+          </div>
+         
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    
+    <script
+  src="https://code.jquery.com/jquery-1.12.4.js"
+  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+  crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
